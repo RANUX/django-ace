@@ -54,13 +54,14 @@ class AceWidget(forms.Textarea):
     def media(self):
         js = ["django_ace/ace/ace.js", "django_ace/widget.js"]
 
-        if self.emmet:
-            js.append("django_ace/emmet/emmet.js")
-            js.append("django_ace/ace/ext-emmet.js")
+        
         if self.mode:
             js.append("django_ace/ace/mode-%s.js" % self.mode)
         if self.theme:
             js.append("django_ace/ace/theme-%s.js" % self.theme)
+        if self.emmet:
+            js.append("django_ace/emmet/emmet.js")
+            js.append("django_ace/ace/ext-emmet.js")
 
         css = {"screen": ["django_ace/widget.css"]}
 
