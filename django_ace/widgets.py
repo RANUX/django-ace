@@ -27,7 +27,7 @@ class AceWidget(forms.Textarea):
         readonly=False,
         showgutter=True,
         behaviours=True,
-        emmet = False,
+        emmet=False,
         *args,
         **kwargs
     ):
